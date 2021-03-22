@@ -1,7 +1,5 @@
 # pos_chatbots
 
-# pos_chatbots
-
 Observação: este projeto foi criado utilizando o Python 3.8.8. Por questões de compatibilidade, sugere-se utilizar a mesma release para testes e parte-se da premissa de que o mesmo já se encontra instalado.
 
 # Setup:
