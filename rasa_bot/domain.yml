@@ -1,0 +1,48 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- saudacao:
+    use_entities: true
+- saida:
+    use_entities: true
+- afirmacao:
+    use_entities: true
+- negacao:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Olá, sou o Hermann, como posso lhe ajudar?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Aqui está algo para lhe animar:'
+  utter_did_that_help:
+  - text: Isto foi útil?
+  utter_happy:
+  - text: Ótimo, siga em frente!
+  utter_goodbye:
+  - text: Até mais
+  utter_iamabot:
+  - text: Eu sou um robô, powered by Rasa.
+  utter_saudacao:
+  - text: Olá, sou o Hermann, como posso lhe ajudar?
+actions: []
+forms: {}
+e2e_actions: []
