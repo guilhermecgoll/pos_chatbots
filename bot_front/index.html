@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="./css/Chatroom.css" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css" />
+</head>
+
+<body>
+	<div class="chat-container"></div>
+
+	<script src="./js/Chatroom.js"></script>
+	<script type="text/javascript">
+		var chatroom = new window.Chatroom({
+			host: "http://localhost:5005",
+			title: "Conversando com o Herman",
+			container: document.querySelector(".chat-container"),
+			//welcomeMessage: "Hi, I am Mike. How may I help you?",
+			speechRecognition: "pt-BR",
+			voiceLang: "pt-BR"
+		});
+		chatroom.openChat();
+	</script>
+</body>
+
+</html>

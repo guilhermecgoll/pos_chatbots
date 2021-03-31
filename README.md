@@ -17,3 +17,11 @@ Observação: este projeto foi criado utilizando o Python 3.8.8. Por questões d
 ```
 
 ## Inicialização do serviço do bot
+
+```
+(.venv)> rasa run --cors "*"
+```
+
+## Interação com o bot
+
+Abrir o arquivo ``bot_front\index.html``
