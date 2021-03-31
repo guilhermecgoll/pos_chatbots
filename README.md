@@ -6,7 +6,7 @@ Alunos:
 - Guilherme Cristiano Goll
 - Fernanda Krieger da Silva Beber
 
-O Bot: seu nome é Herman, em homenagem ao fundador do município de Blumenau - SC, e prevê a disponibilização de alguns serviços (mock) disponíveis na Praça do Cidadão. Estes serviços serão mais detalhados na seção de #Utilização desta documentação.
+O Bot: seu nome é Hermann, em homenagem ao fundador do município de Blumenau - SC, e prevê a disponibilização de alguns serviços (mock) disponíveis na Praça do Cidadão. Estes serviços serão mais detalhados na seção de [Utilização](https://github.com/guilhermecgoll/pos_chatbots#2-utiliza%C3%A7%C3%A3o) desta documentação.
 
 # 1. Setup:
 
