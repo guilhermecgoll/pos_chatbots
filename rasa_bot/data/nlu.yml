@@ -68,3 +68,9 @@ nlu:
     - perfeito
     - é claro
     - com certeza
+- intent: ajuda
+  examples: |
+    - preciso de ajuda
+    - me ajuda
+    - me diz você
+    - o que você sabe fazer

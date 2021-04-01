@@ -24,3 +24,9 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+- story: help path
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: ajuda
+  - action: utter_ajuda

@@ -25,6 +25,8 @@ intents:
     use_entities: true
 - negacao:
     use_entities: true
+- ajuda:
+    use_entities: true
 entities: []
 slots: {}
 responses:
@@ -43,6 +45,13 @@ responses:
   - text: Eu sou um robô, powered by Rasa.
   utter_saudacao:
   - text: Olá, sou o Hermann, como posso lhe ajudar?
+  utter_ajuda:
+  - buttons:
+    - payload: /affirm
+      title: Consulta de dados do iptu
+    - payload: /deny
+      title: Consulta de dados do iptu
+    text: 'Aqui está o que eu sei fazer:'
 actions: []
 forms: {}
 e2e_actions: []
