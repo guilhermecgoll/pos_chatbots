@@ -1,58 +1,30 @@
 version: "2.0"
 nlu:
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-- intent: saudacao
+- intent: saudacoes
   examples: |
     - oi
     - olá
     - bom dia
     - boa tarde
     - boa noite
-- intent: saida
+    - salve
+    - como vai?
+    - tudo bem?
+    - tudo certo?
+    - tudo joia?
+    - e ai beleza?
+- intent: despedida
   examples: |
     - tchau
     - adeus
     - até mais
     - tenha um bom dia
+    - valeu
+    - obrigado
+    - falou
     - flws
     - vlew
+    - vlw
 - intent: negacao
   examples: |
     - não
@@ -60,7 +32,10 @@ nlu:
     - nope
     - nem pensar
     - de jeito nenhum
-- intent: afirmacao
+    - de maneira nenhuma
+    - nada disso
+    - absolutamente não
+- intent: confirmacao
   examples: |
     - sim
     - claro
@@ -68,6 +43,12 @@ nlu:
     - perfeito
     - é claro
     - com certeza
+    - pode crer
+    - total
+    - totalmente
+    - beleza
+    - blz
+    - concordo
 - intent: ajuda
   examples: |
     - preciso de ajuda
@@ -78,3 +59,90 @@ nlu:
   examples: |
     - olá mundo
     - hello world
+- intent: desafio_bot
+  examples: |
+    - você é um robô?
+    - você é um bot?
+    - isso é um robo?
+    - isso é um bot?
+    - estou falando com um atendente?
+    - você é humano?
+    - você é uma pessoa?
+
+- intent: agendar_atendimento
+  examples: |
+    - desejo marcar um atendimento para [hoje](dia) 
+    - quero um atendimento para [amanhã](dia)
+    - atendimento
+    - gostaria de atendimento
+    - marcar atendimento para dia [15/04](dia)
+    - agendar um atendimento dia [02/01](dia) as [14:00](horario)
+    - quero marcar um atendimento para as [14h](horario)
+    - quero agendar um atendimento
+    - quero falar com alguém
+
+- intent: ligar_eletricidade
+  examples: |
+    - quero ligar a energia
+    - quero energia
+    - ligar a energia
+    - religar a eletricidade
+    - ligar a eletricidade
+    - quero religar a energia
+    - energia elétrica
+    - eletricidade
+    - pedir pra religarem a energia
+
+- intent: alvara_sanitario
+  examples: |
+    - vigilância sanitária
+    - quero certificado vigilância
+    - vigilância
+    - formulário da vigilância
+    - quero o formulário da vigilância sanitária
+    - petição da vigilância sanitária
+    - acesso ao formulário da vigilância sanitária
+    - baixar alvará sanitário
+    - alvará sanitário
+    - 2a via do alvará sanitário
+    - 2 via do alvará
+    - segunda via do alvará sanitário
+
+- intent: nota_fiscal
+  examples: |
+    - desejo emitir uma nota
+    - quero emitir uma nota fiscal de serviço
+    - nota fiscal
+    - quero nota fiscal
+    - quero uma nota fiscal de serviço
+    - nota fiscal de serviço
+    - quero uma nota
+    - emitir nota
+    - emitir nota fiscal
+    - desejo emitir nota
+    - preciso de uma nota 
+    - preciso de uma nota fiscal
+
+- intent: cateira_identidade
+  examples: |
+    - quero tirar a identidade
+    - quero fazer a carteira de identidade
+    - carteira de identidade
+    - preciso fazer a carteira de identidade
+    - preciso da identidade
+    - quero fazer a identidade
+    - identidade
+    - carteira de identidade
+    - refazer a identidade
+    - refazer a carteira de identidade
+    - documento da identidade
+    - fazer o documento da identidade
+
+- intent: carteira_trabalho
+  examples: |
+    - fazer a carteira de trabalho
+    - quero fazer a carteira de trabalho
+    - tirar cateira de trabalho
+    - carteira de trabalho
+    - carteira trabalhor
+    - fazer a carteira do trabalho
