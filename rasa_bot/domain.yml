@@ -1,57 +1,82 @@
-version: '2.0'
-config:
-  store_entities_as_slots: true
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
 intents:
-- goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- saudacao:
-    use_entities: true
-- saida:
-    use_entities: true
-- afirmacao:
-    use_entities: true
-- negacao:
-    use_entities: true
-- ajuda:
-    use_entities: true
-entities: []
-slots: {}
+- saudacoes
+- despedida
+- ajuda
+- confirmacao
+- negacao
+- desafio_bot
+- agendar_atendimento
+- ligar_eletricidade
+- alvara_sanitario
+- nota_fiscal
+- cateira_identidade
+- carteira_trabalho
+- certificado_negativo_debito
+- ambulante_alvara_eventos
+- ambulante_alvara_anual
+
+actions:
+- utter_saudacao
+- utter_despedida
+- utter_ajuda
+- utter_confirmacao
+- utter_negacao
+- utter_desafio_bot
+
 responses:
-  utter_greet:
-  - text: Olá, sou o Hermann, como posso lhe ajudar?
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Aqui está algo para lhe animar:'
-  utter_did_that_help:
-  - text: Isto foi útil?
-  utter_happy:
-  - text: Ótimo, siga em frente!
-  utter_goodbye:
-  - text: Até mais
-  utter_iamabot:
-  - text: Eu sou um robô, powered by Rasa.
   utter_saudacao:
   - text: Olá, sou o Hermann, como posso lhe ajudar?
+  utter_despedida:
+  - text: Espero ter ajudado. Até mais!
   utter_ajuda:
   - buttons:
-    - payload: /affirm
-      title: Consulta de dados do iptu
-    - payload: /deny
-      title: Consulta de dados do iptu
+    - title: Agendar um atendimento
+      payload: /agendar_atendimento
+    - title: Ligar a energia elétrica
+      payload: /ligar_eletricidade
+    - title: Emitir alvará sanitário
+      payload: /alvara_sanitario
+    - title: Emitir nota fiscal
+      payload: /nota_fiscal
+    - title: Solicitar carteira de identidade
+      payload: /cateira_identidade
+    - title: Solicitar carteira de trabalho
+      payload: /carteira_trabalho
+    - title: Gerar certificado negativo de débito
+      payload: /certificado_negativo_debito
+    - title: Emitir alvará para eventos - Ambulante
+      payload: /ambulante_alvara_eventos
+    - title: Emitir alvará anual - Ambulante
+      payload: /ambulante_alvara_anual
     text: 'Aqui está o que eu sei fazer:'
-actions: []
-forms: {}
-e2e_actions: []
+  utter_desafio_bot:
+  - text: Beep, beep, beep. Você adivinhou, eu sou um robô, criado com a ferramenta Rasa.
+  utter_ask_dia:
+  - text: Para qual dia você deseja agendar o atendimento?
+  utter_ask_horario:
+  - text: Para qual horário você deseja agendar o atendimento?
+  utter_atendimento_agendado:
+  - text: O seu atendimento foi agendado com sucesso! Posso te ajudar com mais alguma coisa? 
+  utter_please_rephrase:
+  - text: Me desculpe, não entendi. Você poderia repetir de uma forma diferente?
+
+entities:
+  - dia
+  - horario
+
+slots:
+  dia:
+    type: text
+    influence_conversation: false
+  horario:
+    type: text
+    influence_conversation: false
+
+forms:
+  form_atendimento:
+    dia:
+      - type: from_entity
+        entity: dia
+    horario:
+      - type: from_entity
+        entity: horario
