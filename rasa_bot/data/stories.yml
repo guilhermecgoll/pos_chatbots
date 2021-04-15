@@ -6,27 +6,10 @@ stories:
   - action: utter_saudacao
   - intent: mood_great
   - action: utter_happy
-- story: sad path 1
-  steps:
-  - intent: saudacao
-  - action: utter_saudacao
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-- story: sad path 2
-  steps:
-  - intent: saudacao
-  - action: utter_saudacao
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
 - story: help path
   steps:
   - intent: saudacao
   - action: utter_saudacao
   - intent: ajuda
   - action: utter_ajuda
+  - action: action_consulta_iptu

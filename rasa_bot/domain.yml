@@ -27,6 +27,8 @@ intents:
     use_entities: true
 - ajuda:
     use_entities: true
+- ola_mundo:
+    use_entities: true
 entities: []
 slots: {}
 responses:
@@ -47,11 +49,13 @@ responses:
   - text: Olá, sou o Hermann, como posso lhe ajudar?
   utter_ajuda:
   - buttons:
-    - payload: /affirm
+    - payload: /saudacao
       title: Consulta de dados do iptu
-    - payload: /deny
+    - payload: /saida
       title: Consulta de dados do iptu
     text: 'Aqui está o que eu sei fazer:'
-actions: []
+actions: [
+action_consulta_iptu
+]
 forms: {}
 e2e_actions: []

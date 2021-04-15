@@ -26,6 +26,12 @@ Observação: este projeto foi criado utilizando o Python 3.8.8. Por questões d
 
 # Utilização
 
+## Inicialização do servidor de ações customizadas (custom action server)
+
+```
+(.venv)> rasa run actions
+```
+
 ## Inicialização do serviço do bot
 
 ```
@@ -34,4 +40,4 @@ Observação: este projeto foi criado utilizando o Python 3.8.8. Por questões d
 
 ## Interação com o bot
 
-Abrir o arquivo ``bot_front\index.html``
+Abrir o arquivo ``bot_front\index.html`` com o navegador
