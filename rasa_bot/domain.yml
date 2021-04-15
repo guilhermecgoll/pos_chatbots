@@ -22,6 +22,7 @@ actions:
 - utter_confirmacao
 - utter_negacao
 - utter_desafio_bot
+- action_consulta_iptu
 
 responses:
   utter_saudacao:

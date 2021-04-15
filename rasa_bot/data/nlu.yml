@@ -55,6 +55,10 @@ nlu:
     - me ajuda
     - me diz você
     - o que você sabe fazer
+- intent: ola_mundo
+  examples: |
+    - olá mundo
+    - hello world
 - intent: desafio_bot
   examples: |
     - você é um robô?
