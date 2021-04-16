@@ -11,6 +11,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import requests
 
 
 class ActionConsultaIptu(Action):
@@ -22,6 +23,8 @@ class ActionConsultaIptu(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="Não há nenhuma pendência com seu IPTU")
+        response = requests.get("http://localhost:5000/consulta_iptu?codigo=12")
+        #print(response)
+        dispatcher.utter_message(text=response.content)
 
         return []

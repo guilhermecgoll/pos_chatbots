@@ -1,29 +1,60 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-- saudacoes
-- despedida
-- ajuda
-- confirmacao
-- negacao
-- desafio_bot
-- agendar_atendimento
-- ligar_eletricidade
-- alvara_sanitario
-- nota_fiscal
-- cateira_identidade
-- carteira_trabalho
-- certificado_negativo_debito
-- ambulante_alvara_eventos
-- ambulante_alvara_anual
-
-actions:
-- utter_saudacao
-- utter_despedida
-- utter_ajuda
-- utter_confirmacao
-- utter_negacao
-- utter_desafio_bot
-- action_consulta_iptu
-
+- saudacao:
+    use_entities: true
+- despedida:
+    use_entities: true
+- ajuda:
+    use_entities: true
+- confirmacao:
+    use_entities: true
+- negacao:
+    use_entities: true
+- desafio_bot:
+    use_entities: true
+- agendar_atendimento:
+    use_entities: true
+- ligar_eletricidade:
+    use_entities: true
+- alvara_sanitario:
+    use_entities: true
+- nota_fiscal:
+    use_entities: true
+- cateira_identidade:
+    use_entities: true
+- carteira_trabalho:
+    use_entities: true
+- certificado_negativo_debito:
+    use_entities: true
+- ambulante_alvara_eventos:
+    use_entities: true
+- ambulante_alvara_anual:
+    use_entities: true
+- consultar_iptu:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- ola_mundo:
+    use_entities: true
+entities:
+- dia
+- horario
+slots:
+  dia:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  horario:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
   utter_saudacao:
   - text: Olá, sou o Hermann, como posso lhe ajudar?
@@ -31,24 +62,24 @@ responses:
   - text: Espero ter ajudado. Até mais!
   utter_ajuda:
   - buttons:
-    - title: Agendar um atendimento
-      payload: /agendar_atendimento
-    - title: Ligar a energia elétrica
-      payload: /ligar_eletricidade
-    - title: Emitir alvará sanitário
-      payload: /alvara_sanitario
-    - title: Emitir nota fiscal
-      payload: /nota_fiscal
-    - title: Solicitar carteira de identidade
-      payload: /cateira_identidade
-    - title: Solicitar carteira de trabalho
-      payload: /carteira_trabalho
-    - title: Gerar certificado negativo de débito
-      payload: /certificado_negativo_debito
-    - title: Emitir alvará para eventos - Ambulante
-      payload: /ambulante_alvara_eventos
-    - title: Emitir alvará anual - Ambulante
-      payload: /ambulante_alvara_anual
+    - payload: /agendar_atendimento
+      title: Agendar um atendimento
+    - payload: /ligar_eletricidade
+      title: Ligar a energia elétrica
+    - payload: /alvara_sanitario
+      title: Emitir alvará sanitário
+    - payload: /nota_fiscal
+      title: Emitir nota fiscal
+    - payload: /cateira_identidade
+      title: Solicitar carteira de identidade
+    - payload: /carteira_trabalho
+      title: Solicitar carteira de trabalho
+    - payload: /certificado_negativo_debito
+      title: Gerar certificado negativo de débito
+    - payload: /ambulante_alvara_eventos
+      title: Emitir alvará para eventos - Ambulante
+    - payload: /ambulante_alvara_anual
+      title: Emitir alvará anual - Ambulante
     text: 'Aqui está o que eu sei fazer:'
   utter_desafio_bot:
   - text: Beep, beep, beep. Você adivinhou, eu sou um robô, criado com a ferramenta Rasa.
@@ -57,27 +88,23 @@ responses:
   utter_ask_horario:
   - text: Para qual horário você deseja agendar o atendimento?
   utter_atendimento_agendado:
-  - text: O seu atendimento foi agendado com sucesso! Posso te ajudar com mais alguma coisa? 
+  - text: O seu atendimento foi agendado com sucesso! Posso te ajudar com mais alguma coisa?
   utter_please_rephrase:
   - text: Me desculpe, não entendi. Você poderia repetir de uma forma diferente?
-
-entities:
-  - dia
-  - horario
-
-slots:
-  dia:
-    type: text
-    influence_conversation: false
-  horario:
-    type: text
-    influence_conversation: false
-
+actions:
+- utter_saudacao
+- utter_despedida
+- utter_ajuda
+- utter_confirmacao
+- utter_negacao
+- utter_desafio_bot
+- action_consulta_iptu
 forms:
   form_atendimento:
     dia:
-      - type: from_entity
-        entity: dia
+    - entity: dia
+      type: from_entity
     horario:
-      - type: from_entity
-        entity: horario
+    - entity: horario
+      type: from_entity
+e2e_actions: []
