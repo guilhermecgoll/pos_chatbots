@@ -44,6 +44,7 @@ intents:
 entities:
 - dia
 - horario
+- numero_iptu
 slots:
   dia:
     type: rasa.shared.core.slots.TextSlot
@@ -54,6 +55,11 @@ slots:
     type: rasa.shared.core.slots.TextSlot
     initial_value: null
     auto_fill: true
+    influence_conversation: false
+  numero_iptu:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
     influence_conversation: false
 responses:
   utter_saudacao:
@@ -80,13 +86,17 @@ responses:
       title: Emitir alvará para eventos - Ambulante
     - payload: /ambulante_alvara_anual
       title: Emitir alvará anual - Ambulante
+    - payload: Consultar o IPTU
+      title: Consultar pendência com o IPTU
     text: 'Aqui está o que eu sei fazer:'
   utter_desafio_bot:
   - text: Beep, beep, beep. Você adivinhou, eu sou um robô, criado com a ferramenta Rasa.
-  utter_ask_dia:
+  utter_ask_form_atendimento_dia:
   - text: Para qual dia você deseja agendar o atendimento?
-  utter_ask_horario:
+  utter_ask_form_atendimento_horario:
   - text: Para qual horário você deseja agendar o atendimento?
+  utter_ask_consulta_iptu_form_numero_iptu:
+  - text: Qual o número do IPTU do imóvel?
   utter_atendimento_agendado:
   - text: O seu atendimento foi agendado com sucesso! Posso te ajudar com mais alguma coisa?
   utter_please_rephrase:
@@ -107,4 +117,7 @@ forms:
     horario:
     - entity: horario
       type: from_entity
+  consulta_iptu_form:
+    numero_iptu:
+    - type: from_text
 e2e_actions: []

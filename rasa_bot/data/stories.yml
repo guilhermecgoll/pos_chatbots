@@ -26,4 +26,8 @@ stories:
   - intent: saudacao
   - action: utter_saudacao
   - intent: consultar_iptu
+  - action: consulta_iptu_form
+  - active_loop: consulta_iptu_form
+  - active_loop: null
   - action: action_consulta_iptu
+  - action: utter_despedida

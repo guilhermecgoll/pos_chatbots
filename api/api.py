@@ -16,9 +16,9 @@ def consulta_iptu():
         return 'O código não foi informado'
     code = int(code)
     if code is None or code % 2 != 0:
-        return 'não é par'
+        return f'Não foi encontrada nenhuma pendência para o imóvel de código {code}'
     else:
-        return 'é par'
+        return f'Foi encontrada uma pendência para o imóvel de código {code}. Por favor, dirija-se até a Seplan para regularização.'
 
 if __name__ == "__main__":
     app.run()
