@@ -1,3 +1,5 @@
 rasa_bot/models/*
 venv
 .venv
+rasa_bot/rasa.db-shm
+rasa_bot/rasa.db-wal
