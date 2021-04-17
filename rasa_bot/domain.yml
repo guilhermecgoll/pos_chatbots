@@ -23,44 +23,47 @@ intents:
     use_entities: true
 - alvara_sanitario:
     use_entities: true
-- nota_fiscal:
-    use_entities: true
-- cateira_identidade:
-    use_entities: true
-- carteira_trabalho:
-    use_entities: true
-- certificado_negativo_debito:
-    use_entities: true
-- ambulante_alvara_eventos:
-    use_entities: true
-- ambulante_alvara_anual:
-    use_entities: true
 - consultar_iptu:
     use_entities: true
 - nlu_fallback:
     use_entities: true
-- ola_mundo:
-    use_entities: true
+
 entities:
-- dia
-- horario
-- numero_iptu
+  - dia
+  - horario
+  - numero_iptu
+  - nome
+  - email
+  - tipo
+  - cnpj
+
 slots:
   dia:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
+    type: text
     influence_conversation: false
   horario:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
+    type: text
+    influence_conversation: false
+  nome:
+    type: text
+    influence_conversation: false
+  email:
+    type: text
     influence_conversation: false
   numero_iptu:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: false
+    type: text
     influence_conversation: false
+  tipo:
+    type: categorical
+    values:
+      - co
+      - ca
+      - a
+    influence_conversation: false
+  cnpj:
+    type: text
+    influence_conversation: false
+
 responses:
   utter_saudacao:
   - text: Olá, sou o Hermann, como posso lhe ajudar?
@@ -68,56 +71,87 @@ responses:
   - text: Espero ter ajudado. Até mais!
   utter_ajuda:
   - buttons:
-    - payload: /agendar_atendimento
-      title: Agendar um atendimento
-    - payload: /ligar_eletricidade
-      title: Ligar a energia elétrica
-    - payload: /alvara_sanitario
-      title: Emitir alvará sanitário
-    - payload: /nota_fiscal
-      title: Emitir nota fiscal
-    - payload: /cateira_identidade
-      title: Solicitar carteira de identidade
-    - payload: /carteira_trabalho
-      title: Solicitar carteira de trabalho
-    - payload: /certificado_negativo_debito
-      title: Gerar certificado negativo de débito
-    - payload: /ambulante_alvara_eventos
-      title: Emitir alvará para eventos - Ambulante
-    - payload: /ambulante_alvara_anual
-      title: Emitir alvará anual - Ambulante
-    - payload: Consultar o IPTU
-      title: Consultar pendência com o IPTU
+    - title: Agendar um atendimento
+      payload: /agendar_atendimento
+    - title: Ligar a energia elétrica
+      payload: /ligar_eletricidade
+    - title: Emitir alvará sanitário
+      payload: /alvara_sanitario
+    - title: Consultar pendência com o IPTU
+      payload: Consultar o IPTU
     text: 'Aqui está o que eu sei fazer:'
   utter_desafio_bot:
   - text: Beep, beep, beep. Você adivinhou, eu sou um robô, criado com a ferramenta Rasa.
-  utter_ask_form_atendimento_dia:
+  utter_ask_dia:
   - text: Para qual dia você deseja agendar o atendimento?
-  utter_ask_form_atendimento_horario:
+  utter_ask_horario:
   - text: Para qual horário você deseja agendar o atendimento?
-  utter_ask_consulta_iptu_form_numero_iptu:
-  - text: Qual o número do IPTU do imóvel?
   utter_atendimento_agendado:
-  - text: O seu atendimento foi agendado com sucesso! Posso te ajudar com mais alguma coisa?
+  - text: O seu atendimento foi agendado com sucesso! Posso te ajudar com mais alguma coisa? 
   utter_please_rephrase:
   - text: Me desculpe, não entendi. Você poderia repetir de uma forma diferente?
+  utter_ask_nome:
+  - text: Qual o seu nome completo?
+  utter_ask_email:
+  - text: Qual o seu e-mail?
+  utter_ask_numero_iptu:
+  - text: Por favor, informe o número do IPTU.
+  utter_ligacao_energia:
+  - text: Solicitação realizada. Por favor, aguarde o contato por e-mail. Posso lhe ajudar com mais alguma coisa?
+  utter_ask_tipo:
+  - text: Qual o tipo de petição? (CO - Concessão / CA - Cancelamento / A - Alteração)
+  utter_ask_cnpj:
+  - text: Qual o CNPJ da empresa?
+  utter_alvara_sanitario:
+  - text: Petição iniciada. Logo mais você receberá um e-mail. Deseja mais alguma ajuda?
+
 actions:
 - utter_saudacao
 - utter_despedida
 - utter_ajuda
-- utter_confirmacao
-- utter_negacao
 - utter_desafio_bot
+- utter_ask_dia
+- utter_ask_horario
+- utter_atendimento_agendado
+- utter_please_rephrase
+- utter_ask_nome
+- utter_ask_email
+- utter_ask_numero_iptu
+- utter_ligacao_energia
+- utter_ask_tipo
+- utter_ask_cnpj
+- utter_alvara_sanitario
 - action_consulta_iptu
+
 forms:
   form_atendimento:
     dia:
-    - entity: dia
-      type: from_entity
+      - type: from_entity
+        entity: dia
     horario:
-    - entity: horario
-      type: from_entity
+      - type: from_entity
+        entity: horario
+
+  form_energia:
+    nome:
+      - type: from_text
+        entity: nome
+    email:
+      - type: from_entity
+        entity: email
+
+  form_alvara_sanitario:
+    tipo:
+      - type: from_entity
+        entity: tipo
+    cnpj:
+      - type: from_entity
+        entity: cnpj
+    email:
+      - type: from_entity
+        entity: email
+
   consulta_iptu_form:
     numero_iptu:
-    - type: from_text
-e2e_actions: []
+    - type: from_entity
+      entity: numero_iptu
