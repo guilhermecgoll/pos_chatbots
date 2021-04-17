@@ -2,7 +2,7 @@ version: "2.0"
 stories:
 - story: happy path
   steps:
-  - intent: saudacoes
+  - intent: saudacao
   - action: utter_saudacao
   - intent: ajuda
   - action: utter_ajuda
@@ -11,7 +11,7 @@ stories:
 
 - story: story_01
   steps:
-  - intent: saudacoes
+  - intent: saudacao
   - action: utter_saudacao
   - intent: agendar_atendimento
   - action: form_atendimento
@@ -19,4 +19,15 @@ stories:
   - active_loop: null
   - action: utter_atendimento_agendado
   - intent: negacao
+  - action: utter_despedida
+
+- story: consultar_iptu
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: consultar_iptu
+  - action: consulta_iptu_form
+  - active_loop: consulta_iptu_form
+  - active_loop: null
+  - action: action_consulta_iptu
   - action: utter_despedida
