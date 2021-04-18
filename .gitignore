@@ -3,3 +3,6 @@ venv
 .venv
 rasa_bot/rasa.db-shm
 rasa_bot/rasa.db-wal
+rasa_bot/actions/__pycache__/actions.cpython-38.pyc
+rasa_bot/events.db-shm
+*.pyc

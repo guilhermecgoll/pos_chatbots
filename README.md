@@ -21,12 +21,25 @@ Observação: este projeto foi criado utilizando o Python 3.8.8. Por questões d
 ## Instalação das dependências
 
 ```
-(.venv)> pip install rasa
+(.venv)> pip install -r requirements.txt
+```
+
+# Treinamento do modelo
+
+## Para treinamento do modelo deve-se executar o comando abaixo:
+
+Obs: é necessário estar no diretório ``rasa_bot`` para que o comando abaixo funcione.
+```
+(.venv)> rasa train --force
 ```
 
 # Utilização
 
 ## Inicialização do servidor de ações customizadas (custom action server)
+
+Este servidor é responsável por permitir a chamada de APIs, entre outras funções. Em outras palavras, ele executará o arquivo ``actions.py``.
+
+Obs: é necessário estar no diretório ``rasa_bot`` para que o comando abaixo funcione.
 
 ```
 (.venv)> rasa run actions
@@ -34,10 +47,22 @@ Observação: este projeto foi criado utilizando o Python 3.8.8. Por questões d
 
 ## Inicialização do serviço do bot
 
+Obs: é necessário estar no diretório ``rasa_bot`` para que o comando abaixo funcione.
+
 ```
-(.venv)> rasa run --cors "*"
+(.venv)> rasa run --cors "*" -m models --endpoints endpoints.yml
+```
+
+## Inicializaçao do serviço da API
+
+Esta API utiliza o Flask e é bastante simples de ser executada:
+
+Obs: é necessário estar no diretório raiz do repositório para que o comando abaixo funcione.
+
+```
+(.venv)> python .\api\api.py
 ```
 
 ## Interação com o bot
 
-Abrir o arquivo ``bot_front\index.html`` com o navegador
+Abrir o arquivo ``bot_front\index.html`` com o navegador e iniciar a conversa.
