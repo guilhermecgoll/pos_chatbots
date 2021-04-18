@@ -65,4 +65,4 @@ Obs: é necessário estar no diretório raiz do repositório para que o comando 
 
 ## Interação com o bot
 
-Abrir o arquivo ``bot_front\index.html`` com o navegador
+Abrir o arquivo ``bot_front\index.html`` com o navegador e iniciar a conversa.
