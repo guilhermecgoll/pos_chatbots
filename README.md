@@ -66,3 +66,8 @@ Obs: é necessário estar no diretório raiz do repositório para que o comando 
 ## Interação com o bot
 
 Abrir o arquivo ``bot_front\index.html`` com o navegador e iniciar a conversa.
+
+
+# Apuração dos resultados e métricas do modelo
+
+Podem ser encontrados no arquivo ``Exercício_Final_Metricas.ipynb``. Lembrando que os dados utilizados encontram-se nos arquivos ``data.csv`` (diretamente exportados do modelo) e ``data_test.csv`` (que passaram pela curadoria).
