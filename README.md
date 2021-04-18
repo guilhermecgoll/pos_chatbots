@@ -21,13 +21,22 @@ Observação: este projeto foi criado utilizando o Python 3.8.8. Por questões d
 ## Instalação das dependências
 
 ```
-(.venv)> pip install rasa
+(.venv)> pip install -r requirements.txt
+```
+
+# Treinamento do modelo
+
+## Para treinamento do modelo deve-se executar o comando abaixo:
+
+```
+(.venv)> rasa train --force
 ```
 
 # Utilização
 
 ## Inicialização do servidor de ações customizadas (custom action server)
 
+Este servidor é responsável por permitir a chamada de APIs, entre outras funções. Em outras palavras, ele executará o arquivo ``actions.py``.
 ```
 (.venv)> rasa run actions
 ```
@@ -35,7 +44,7 @@ Observação: este projeto foi criado utilizando o Python 3.8.8. Por questões d
 ## Inicialização do serviço do bot
 
 ```
-(.venv)> rasa run --cors "*"
+(.venv)> rasa run --cors "*" -m models --endpoints endpoints.yml
 ```
 
 ## Interação com o bot
