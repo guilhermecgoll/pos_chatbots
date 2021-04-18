@@ -1,4 +1,4 @@
-rasa_bot/models/*
+rasa_bot/models/20210417*
 venv
 .venv
 rasa_bot/rasa.db-shm
