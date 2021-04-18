@@ -1,0 +1,82 @@
+,index,intent_name,parse_data.text,parse_data.intent.confidence
+0,3,saudacao,oi,0.9995806217193604
+1,8,ajuda,me ajuda,0.9987218379974365
+2,13,consultar_iptu,Consultar o IPTU,0.9979153275489807
+3,20,consultar_iptu,145,0.35942137241363525
+4,35,saudacao,oi,0.9992538094520569
+5,40,ajuda,eu preciso de ajuda,0.9954359531402588
+6,45,consultar_iptu,Consultar o IPTU,0.9984288215637207
+7,52,consultar_iptu,1234567,0.9989446997642517
+8,60,saudacao,oi,0.9997811317443848
+9,66,ajuda,preciso de ajuda,0.9902123212814331
+10,71,consultar_iptu,Consultar o IPTU,0.9920246601104736
+11,78,consultar_iptu,1234567,0.9987789988517761
+12,90,consultar_iptu,quero consultar o iptu,0.9896985292434692
+13,97,consultar_iptu,13245678,0.9987789988517761
+14,109,agendar_atendimento,posso agendar um atendimento?,0.9998704195022583
+15,115,agendar_atendimento,quero agendar um atendimento,0.9999480843544006
+16,121,agendar_atendimento,agendar atendimento,0.9999362230300903
+17,127,ajuda,me ajuda,0.9918085336685181
+18,132,agendar_atendimento,/agendar_atendimento,1.0
+19,138,saudacao,oi,0.9997811317443848
+20,143,ajuda,preciso de ajuda,0.9902123212814331
+21,148,agendar_atendimento,/agendar_atendimento,1.0
+22,157,saudacao,oi,0.9997811317443848
+23,162,consultar_iptu,consultar o iptu 12345678,0.9711940288543701
+24,175,ajuda,me ajuda,0.9918085336685181
+25,180,agendar_atendimento,/agendar_atendimento,1.0
+26,187,agendar_atendimento,13/5,0.9998337030410767
+27,195,agendar_atendimento,14:00,0.9998332262039185
+28,205,confirmacao,sim,0.9999455809593201
+29,210,consultar_iptu,quero consultar o iptu,0.9896985292434692
+30,217,consultar_iptu,1234567,0.9987789988517761
+31,229,despedida,obrigado,0.9990687370300293
+32,239,saudacao,oi,0.9996511340141296
+33,244,ajuda,me diz você,0.9966272115707397
+34,249,ajuda,me ajuda,0.9970531463623047
+35,254,alvara_sanitario,/alvara_sanitario,1.0
+36,261,confirmacao,cancelamento,0.8090831637382507
+37,269,alvara_sanitario,10296649000155,0.5186351835727692
+38,279,alvara_sanitario,10.296.649/0001-55,0.9960958361625671
+39,287,alvara_sanitario,teste@teste.com.br,0.4879608154296875
+40,296,confirmacao,teste@teste.com,0.738358199596405
+41,302,alvara_sanitario,/alvara_sanitario,1.0
+42,308,ajuda,me ajuda,0.9970531463623047
+43,313,ligar_eletricidade,/ligar_eletricidade,1.0
+44,320,ligar_eletricidade,Guilherme,0.9992390871047974
+45,328,ligar_eletricidade,teste@email.com,0.994339644908905
+46,338,alvara_sanitario,"sim, preciso do alvará sanitário",0.9999920129776001
+47,350,ajuda,me ajuda,0.9970531463623047
+48,355,alvara_sanitario,/alvara_sanitario,1.0
+49,370,consultar_iptu,eu preciso consultar meu iptu,0.9982162117958069
+50,377,consultar_iptu,123478,0.4775385856628418
+51,388,agendar_atendimento,quero fazer um agendamento com a seplan,0.9990515112876892
+52,395,agendar_atendimento,24/5,0.9934126734733582
+53,403,agendar_atendimento,13:30,0.9905136823654175
+54,413,negacao,não,0.9999566078186035
+55,418,despedida,tchau,0.9998946189880371
+56,426,saudacao,oi,0.9996511340141296
+57,431,ajuda,o que você sabe fazer?,0.9939401149749756
+58,436,consultar_iptu,Consultar o IPTU,0.9997082352638245
+59,443,consultar_iptu,123457,0.4775385856628418
+60,454,despedida,"blza, muito obrigado",0.9739944338798523
+61,459,ajuda,o que mais vc sabe fazer?,0.9574904441833496
+62,464,ligar_eletricidade,/ligar_eletricidade,1.0
+63,471,ligar_eletricidade,Guilherme C. Goll,0.9995840787887573
+64,479,ligar_eletricidade,guilherme@gmail.com,0.9996975064277649
+65,489,confirmacao,sim,0.9999532699584961
+66,494,alvara_sanitario,/alvara_sanitario,1.0
+67,502,confirmacao,CO,0.900074303150177
+68,508,alvara_sanitario,/alvara_sanitario,1.0
+69,514,confirmacao,concessão,0.9810770153999329
+70,520,alvara_sanitario,/alvara_sanitario,1.0
+71,526,confirmacao,concessão,0.9810770153999329
+72,535,ajuda,me ajuda?,0.9970531463623047
+73,540,alvara_sanitario,/alvara_sanitario,1.0
+74,547,confirmacao,concessão,0.9810770153999329
+75,555,alvara_sanitario,10.296.649/0001/55,0.40077245235443115
+76,565,alvara_sanitario,10.296.649/0001-55,0.9960958361625671
+77,573,ligar_eletricidade,guilherme@gmail.com,0.9996975064277649
+78,583,confirmacao,sim,0.9999532699584961
+79,588,agendar_atendimento,/agendar_atendimento,1.0
+80,596,agendar_atendimento,13:30,0.9905136823654175
