@@ -1,14 +1,14 @@
 stories:
 - story: story_00
   steps:
-  - intent: saudacoes
+  - intent: saudacao
   - action: utter_saudacao
   - intent: ajuda
   - action: utter_ajuda
 
 - story: story_01
   steps:
-  - intent: saudacoes
+  - intent: saudacao
   - action: utter_saudacao
   - intent: agendar_atendimento
   - action: form_atendimento
@@ -20,7 +20,7 @@ stories:
 
 - story: story_02
   steps:
-  - intent: saudacoes
+  - intent: saudacao
   - action: utter_saudacao
   - intent: ligar_eletricidade
   - action: form_energia
@@ -32,7 +32,7 @@ stories:
 
 - story: story_03
   steps:
-  - intent: saudacoes
+  - intent: saudacao
   - action: utter_saudacao
   - intent: alvara_sanitario
   - action: form_alvara_sanitario
@@ -44,7 +44,7 @@ stories:
 
 - story: story_04
   steps:
-  - intent: saudacoes
+  - intent: saudacao
   - action: utter_saudacao
   - intent: consultar_iptu
   - action: consulta_iptu_form

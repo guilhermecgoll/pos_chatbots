@@ -34,7 +34,7 @@ nlu:
     - alterar
     - alteração
 
-- intent: saudacoes
+- intent: saudacao
   examples: |
     - oi
     - olá
@@ -47,6 +47,7 @@ nlu:
     - tudo certo?
     - tudo joia?
     - e ai beleza?
+
 - intent: despedida
   examples: |
     - tchau
@@ -147,43 +148,3 @@ nlu:
     - 2a via do alvará sanitário para o documento [99999999999999](cnpj)
     - 2 via do alvará
     - segunda via do alvará sanitário
-
-- intent: nota_fiscal
-  examples: |
-    - desejo emitir uma nota
-    - quero emitir uma nota fiscal de serviço
-    - nota fiscal
-    - quero nota fiscal
-    - quero uma nota fiscal de serviço
-    - nota fiscal de serviço
-    - quero uma nota
-    - emitir nota
-    - emitir nota fiscal
-    - desejo emitir nota
-    - preciso de uma nota 
-    - preciso de uma nota fiscal
-
-- intent: cateira_identidade
-  examples: |
-    - quero tirar a identidade
-    - quero fazer a carteira de identidade
-    - carteira de identidade
-    - preciso fazer a carteira de identidade
-    - preciso da identidade
-    - quero fazer a identidade
-    - identidade
-    - carteira de identidade
-    - refazer a identidade
-    - refazer a carteira de identidade
-    - documento da identidade
-    - fazer o documento da identidade
-
-- intent: carteira_trabalho
-  examples: |
-    - fazer a carteira de trabalho
-    - quero fazer a carteira de trabalho
-    - tirar cateira de trabalho
-    - carteira de trabalho
-    - carteira trabalhor
-    - fazer a carteira do trabalho
-
